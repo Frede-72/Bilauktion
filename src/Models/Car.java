@@ -5,10 +5,10 @@ public class Car implements Comparable<Car> {
     private String brand;
     private String model;
     private int year;
-    private double price;
+    private int price;
     private String numberPlate;
 
-    public Car(String brand,String model,int year,double price,String numberPlate){
+    public Car(String brand,String model,int year,int price,String numberPlate){
 
         this.brand = brand;
         this.model = model;
@@ -20,6 +20,22 @@ public class Car implements Comparable<Car> {
 
     public int getYear(){
         return year;
+    }
+
+    public String getBrand(){
+        return brand;
+    }
+
+    public String getModel(){
+        return model;
+    }
+
+    public int getPrice(){
+        return price;
+    }
+
+    public String getNumberPlate() {
+        return numberPlate;
     }
 
     @Override
