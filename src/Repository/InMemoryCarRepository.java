@@ -20,17 +20,27 @@ public class InMemoryCarRepository implements CarRepository{
     }
 
     @Override
-    public Car getCarFromNumberPlate(String numberPlate) {
-        for(Car c : carsInMemory){
-            if(c.getNumberPlate().equalsIgnoreCase(numberPlate)){
+    public List<Car> getAllCars() {
+        return carsInMemory;
+    }
+
+    @Override
+    public Car getCarFromPlate(String numberPlate) {
+        for (Car c : carsInMemory) {
+            if (c.getNumberPlate().equalsIgnoreCase(numberPlate)) {
                 return c;
             }
         }
         return null;
+
     }
 
     @Override
-    public List<Car> getAllCars() {
-        return carsInMemory;
+    public boolean isCarOnAuction(String numberPlate) {
+        Car car = getCarFromPlate(numberPlate);
+        if (car == null) {
+            return false;
+        }
+        return true;
     }
 }

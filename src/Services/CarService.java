@@ -3,6 +3,10 @@ package Services;
 import Models.Car;
 import Repository.CarRepository;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 public class CarService {
 
     private CarRepository carRepository;
@@ -23,26 +27,50 @@ public class CarService {
     }
 
     public Car findCarFromNumberPlate(String numberPlate) {
-        return carRepository.getCarFromNumberPlate(numberPlate);
+        return carRepository.getCarFromPlate(numberPlate);
     }
 
+    public boolean isCarOnAuction(String numberPlate) {
+        return carRepository.isCarOnAuction(numberPlate);
+    }
+
+
     public boolean removeCarWithNumberPlate(String numberPlate) {
-        Car car = findCarFromNumberPlate(numberPlate);
-        if (car == null) {
-            return false;
+        if (isCarOnAuction(numberPlate)) {
+            carRepository.removeCar(findCarFromNumberPlate(numberPlate));
+            return true;
         }
-        carRepository.removeCar(findCarFromNumberPlate(numberPlate));
-        return true;
+        return false;
     }
 
     public boolean printAllCars() {
-        if (carRepository.getAllCars().isEmpty()) {
+        if (isEmpty()) {
             return false;
         }
-        for (Car c : carRepository.getAllCars()) {
+        printCars(carRepository.getAllCars());
+        return true;
+    }
+
+    public void printAllCarsSorted(Comparator comparator) {
+        if (isEmpty()) {
+            return;
+        }
+        List<Car> cars = carRepository.getAllCars();
+        Collections.sort(cars, comparator);
+        printCars(cars);
+    }
+
+    private void printCars(List<Car> cars) {
+        for (Car c : cars) {
             System.out.println(c);
         }
-        return true;
+    }
+
+    private boolean isEmpty() {
+        if (carRepository.getAllCars().isEmpty()) {
+            return true;
+        }
+        return false;
     }
 
 }

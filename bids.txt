@@ -1,0 +1,30 @@
+John Doe;19000;Toyota;Corolla;2020;18500;AB12345
+Emma Green;19200;Toyota;Corolla;2020;18500;AB12345
+Liam Black;19800;Toyota;Corolla;2020;18500;AB12345
+Emily Smith;17500;Honda;Civic;2019;17200;CD67890
+Noah Reed;17600;Honda;Civic;2019;17200;CD67890
+Chloe Hill;17950;Honda;Civic;2019;17200;CD67890
+Michael Brown;33000;Ford;Mustang;2022;32000;EF23456
+Sophia Cruz;33200;Ford;Mustang;2022;32000;EF23456
+Aiden Scott;33900;Ford;Mustang;2022;32000;EF23456
+Sarah Johnson;15200;Chevrolet;Malibu;2018;15000;GH78901
+Benjamin Young;15400;Chevrolet;Malibu;2018;15000;GH78901
+Grace Baker;15650;Chevrolet;Malibu;2018;15000;GH78901
+David Wilson;36000;BMW;3 Series;2021;35500;IJ34567
+Lily Adams;36200;BMW;3 Series;2021;35500;IJ34567
+Jackson Price;36800;BMW;3 Series;2021;35500;IJ34567
+Laura Davis;42500;Mercedes-Benz;C-Class;2023;42000;KL89012
+Mason Bell;42700;Mercedes-Benz;C-Class;2023;42000;KL89012
+Zoe Turner;43300;Mercedes-Benz;C-Class;2023;42000;KL89012
+Chris Lee;17000;Hyundai;Elantra;2020;16800;MN45678
+Avery Morgan;17100;Hyundai;Elantra;2020;16800;MN45678
+Ethan Cook;17400;Hyundai;Elantra;2020;16800;MN45678
+Anna Martin;28500;Kia;Sorento;2021;28000;OP90123
+Ella Peterson;28800;Kia;Sorento;2021;28000;OP90123
+Logan Ward;29300;Kia;Sorento;2021;28000;OP90123
+James Taylor;15200;Nissan;Altima;2019;14900;QR56789
+Nora Hayes;15350;Nissan;Altima;2019;14900;QR56789
+Henry Simmons;15600;Nissan;Altima;2019;14900;QR56789
+Olivia White;21000;Volkswagen;Jetta;2022;20500;ST01234
+Daniel Ross;21200;Volkswagen;Jetta;2022;20500;ST01234
+Isabella Ford;21800;Volkswagen;Jetta;2022;20500;ST01234

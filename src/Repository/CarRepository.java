@@ -10,7 +10,9 @@ public interface CarRepository {
 
     void removeCar(Car car);
 
-    Car getCarFromNumberPlate(String numberPlate);
-
     List<Car> getAllCars();
+
+    Car getCarFromPlate(String numberPlate);
+
+    boolean isCarOnAuction(String numberPlate);
 }

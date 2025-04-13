@@ -18,4 +18,9 @@ public class InMemoryBidRepository implements BidRepository{
     public void removeBid(Bid bid) {
         bids.remove(bid);
     }
+
+    @Override
+    public List<Bid> getAllBids() {
+        return bids;
+    }
 }
