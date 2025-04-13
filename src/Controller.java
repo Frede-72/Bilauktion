@@ -81,7 +81,7 @@ public class Controller {
                     break;
                 case 2:
                     System.out.println("Enter the numberplate of the car you want to view bids");
-                    String plate = getNonEmptyString();
+                    String plate = getAcceptableString();
                     bidService.printBidsForCar(plate,bidAmountComparator);
                     break;
                 case 3:
@@ -115,9 +115,9 @@ public class Controller {
 
     private void newBid() {
         System.out.println("Enter your name");
-        String name = getNonEmptyString();
+        String name = getAcceptableString();
         System.out.println("Enter the numberplate for the car you are making a bid");
-        String plate = getNonEmptyString();
+        String plate = getAcceptableString();
         System.out.println("Enter your bid");
         int bid = getInt();
         if (!bidService.makeBid(name, plate, bid)) {
@@ -127,11 +127,11 @@ public class Controller {
 
     private void newCar() {
         System.out.println("Enter the numberplate");
-        String plate = getNonEmptyString();
+        String plate = getAcceptableString();
         System.out.println("Enter the car brand");
-        String brand = getNonEmptyString();
+        String brand = getAcceptableString();
         System.out.println("Enter the model");
-        String model = getNonEmptyString();
+        String model = getAcceptableString();
         System.out.println("Enter the year");
         int year = getInt();
         System.out.println("Enter the starting price");
@@ -145,7 +145,7 @@ public class Controller {
 
     private void removeCar() {
         System.out.println("Enter the numberplate of the car to remove");
-        String plate = getNonEmptyString();
+        String plate = getAcceptableString();
         if (carService.removeCarWithNumberPlate(plate)) {
             bidService.removeAllBidsForCar(plate);
             System.out.println(plate + " removed");
@@ -183,11 +183,11 @@ public class Controller {
         return userInput;
     }
 
-    private String getNonEmptyString() {
+    private String getAcceptableString() {
         String input;
         while (true) {
             input = sc.nextLine();
-            if (input.isEmpty()) {
+            if (input.isEmpty()||input.contains(";")) {
                 continue;
             }
             break;
